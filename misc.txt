@@ -1,0 +1,76 @@
+//see full blog in html with example ?
+
+
+<a href="{% url 'post_detail' i.slug  %}" class="btn btn-primary">Read More &rarr;</a></div>
+
+
+<!--  -->
+The "blog effect" refers to the visual style of a blog or website that resembles a traditional blog layout, with a list of articles or posts displayed in reverse chronological order (with the most recent post at the top). This is a common layout for blogs, as it allows readers to easily see the most recent content and navigate to older posts.
+
+To create a blog effect in HTML, you can use a combination of HTML tags and CSS styles to create a layout that displays your blog posts in a list format. Here is an example of how you might do this:
+
+First, create a container element for your blog posts, such as a div element with a class of "blog-posts":
+Copy code
+<div class="blog-posts">
+  <!-- Your blog posts will go here -->
+</div>
+Next, create a template for each of your blog posts using HTML tags such as h2 for the post title, p for the post content, and time for the post date:
+Copy code
+<article class="blog-post">
+  <h2>Post title</h2>
+  <time>Post date</time>
+  <p>Post content</p>
+</article>
+Then, use a looping construct (such as a for loop) to iterate through your list of blog posts and generate the HTML for each post using the template you created in step 2.
+
+Finally, use CSS styles to add styling to your blog posts and create the desired layout. For example, you might use the display property to set the layout of your blog posts to be displayed as a list, and use the margin and padding properties to add spacing between your blog posts.
+
+Here is an example of how your final HTML and CSS might look:
+
+HTML:
+
+Copy code
+<div class="blog-posts">
+  <article class="blog-post">
+    <h2>Post title</h2>
+    <time>Post date</time>
+    <p>Post content</p>
+  </article>
+  <article class="blog-post">
+    <h2>Post title</h2>
+    <time>Post date</time>
+    <p>Post content</p>
+  </article>
+  <!-- More blog posts -->
+</div>
+CSS:
+
+.blog-posts {
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-post {
+  margin: 16px 0;
+  padding: 16px;
+  border: 1px solid #ccc;
+}
+This is just one example of how you might create a blog effect in HTML. There are many different ways you can customize the layout and styling of your blog to create the desired look and feel.
+
+<!-- mind map -->
+
+for blogs:
+ set an image at beginning having round edges
+ => then comes heading of blog
+    => then the body or main content of blog 
+        => at last comes the author name and date 
+
+for blog.html: 
+    => set the blog header image as cover 
+        => use the effect saved in effects as "btn outer glow" for blog icon / links
+            => on clicking the icon or blog card, the link should open to our blog on particular subject. 
+
+for about.html
+  =>adjust image height
+    =>find an animation for photo and apply it
+      => give effect to button that on clicking it, the photo animates and goes to left from center and the about text is shown.

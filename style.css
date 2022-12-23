@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap');
+
+:root {
+    --btnbck: #344a40;
+    --sidenav: #212529;
+    --sidenav2:#adb5bd;
+    --dark: #444;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* hamburger menu */
+#menu {
+    height: 100vh;
+}
+
+#menu li {
+    padding: 10px ;
+}
+
+#menuToggle {
+    display: block;
+    position: relative;
+    top: 50px;
+    left: 50px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#menuToggle a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+/* #menu li:hover {
+    color: var(--btnbck);
+} */
+
+
+#menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    /* hide this */
+    z-index: 2;
+    /* and place it over the hamburger */
+    -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: var(--sidenav);
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+    transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked~span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: white;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked~span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked~span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu {
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    background: var(--sidenav);
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu li {
+    padding: 20px 0;
+    font-size: 35px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked~ul {
+    transform: none;
+}
+
+/* ham over */
+
+.sidebar {
+    margin-right: 12vw;
+    z-index: 2;
+}
+
+.main {
+    /* background-color: yellow; */
+    width: 85vw;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+}
+
+.infoContainer {
+    /* background-color: rgb(216, 29, 216); */
+    height: 58vh;
+    width: 80vw;
+    margin: 83px auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.devInfo {
+    flex-direction: column;
+    display: flex;
+    font-family: 'Source Code Pro', monospace;
+    justify-content: center;
+    padding-left: 7vw;
+}
+
+.devPic img {
+    height: 57vh;
+    padding-top: 4px;
+}
+
+.hello {
+    font-size: 75px;
+    display: flex;
+}
+
+.name {
+    font-size: 50px;
+    font-family: 'Fira Sans', sans-serif;
+    display: flex;
+    font-weight: bold;
+}
+
+.about {
+    font-size: 40px;
+    display: flex;
+}
+
+.moreAbout {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 18px;
+}
+
+.btn {
+    margin-top: 34px;
+}
+
+.btn button{
+    padding: 10px 14px;
+    border-radius: 22px;
+    color: white;
+    background: var(--btnbck);
+    margin: 0 3px;
+    font-size: 21px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn button:hover {
+    color : var(--sidenav);
+    background-color: var(--sidenav2);
+}
+
+.main1 {
+    /* background-color: yellow; */
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    /* display: flex;
+    */
+}
+
+.btn-sm {
+    margin-top: 1vw;
+    padding: 5px 10px;
+}

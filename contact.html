@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shubham Dave - Web Developer</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+  <div class="container" id="reset">
+    <div class="sidebar">
+    <div id="menuToggle">
+      <!--
+              A fake / hidden checkbox is used as click reciever,
+              so you can use the :checked selector on it.
+              -->
+      <input title="ham" type="checkbox" />
+
+      <span></span>
+      <span></span>
+      <span></span>
+      <ul id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact Me</a></li>
+        <li><a href="cv.txt">Get CV</a></li>
+      </ul>
+    </div>
+    </nav>
+  </div>
+
+    <div class="main1">
+      <div class="contactForm">
+        <h1>Contact for Work or General Enquiries</h1> <br>
+        <form action="#" method="post">
+          <!-- name of client -->
+          <div class="mb-3">
+            <label for="clientName" class="form-label">Name</label> <br>
+            <input type="name" name="cname" id="clientName" class="formControl" required >
+          </div> <br>
+          <!-- mail -->
+          <div class="mb-3">
+            <label for="clientEmail" class="form-label">E-mail Address</label> <br>
+            <input type="email" name="cmail" id="clientEmail" aria-describedby="emailHelp" class="formControl" required>
+          </div> <br>
+          <!-- phone num -->
+          <div class="mb-3">
+            <label for="clientPhone" class="form-label">Phone No.</label> <br>
+            <input type="phone" class="formControl" aria-describedby="emailHelp" id="clientPhone" name="cnum"> <br>
+          </div> <br>
+          <!-- text query -->
+          <div class="mb-3">
+            <label for="clientReq" class="form-label" id="que">Any Questions ?</label> <br>
+            <input type="textbox" name="cquery" id="clientQuery" class="formControl" placeholder="Text Query Here">
+          </div> <br>
+          <div id="emailHelp">I will never share your e-mail or phone number with anyone.</div>
+          <!-- Gen or Work ?? -->
+          <div class="mb-3 formcheck">
+            <input type="checkbox" class="form-check-input" name="isclient" id="isclient">
+            <label for="isclient" class="check-label" >I want you to work on a project with me.</label>
+          </div>
+          <button class="btn btn-sm" type="submit" name="submit">Submit The Proposal</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
